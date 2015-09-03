@@ -14,3 +14,10 @@ $('#menu a').each(function() {
     $select.append($option);
 
 });
+
+var $button = $('<button>Go</button>');
+$('#menu').append($button);
+
+$button.click(function() {
+    window.location = $select.val();
+});
