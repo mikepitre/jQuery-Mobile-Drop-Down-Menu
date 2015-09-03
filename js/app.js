@@ -1,7 +1,16 @@
-'use strict';
-
 var $select = $('<select></select>');
-$(#menu).append($select);
+$('#menu').append($select);
 
 
+$('#menu a').each(function() {
+    var $anchor = $(this);
+    var $option = $('<option></option>');
 
+
+    $option.val($anchor.attr('href'));
+
+    $option.text($anchor.text());
+
+    $select.append($option);
+
+});
